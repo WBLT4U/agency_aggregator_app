@@ -1,0 +1,206 @@
+.header h1 {
+  font-size: 100px;
+}
+
+.main-page {
+  max-width: 100%;
+  margin: 0 auto;
+  width: 100%;
+}
+.card {
+  background-color: #f7f7f7;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+.card-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+.card-image {
+  border-radius: 50px;
+  max-width: 200px;
+
+}
+
+.action-btn {
+  background-color: green;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.action-btn:hover {
+  background-color: green;
+  font-weight: 600;
+}
+.form-container {
+  max-width: 600px;
+  padding: 25px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  max-width: 200px;
+  width: 100%;
+  margin: 10px 0;
+}
+button {
+  background-color: #4caf50;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 10px;
+  cursor: pointer;
+  max-width: 200px;
+  width: 100%;
+}
+.main-container {
+max-width: 600px;
+margin: 0 auto;
+width: 100%;
+
+}
+.car {
+  background-color: green;
+  color: white;
+  text-align: center;
+  max-width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.news {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  width: 100%;
+}
+.news-item {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px;
+  max-width: 500px;
+}
+.home-page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  width: 100%;
+  line-height: 1.5;
+  text-align: justify;
+  color: green;
+}
+.user-name {
+  font-size: 30px;
+  margin: 10px 0;
+}
+
+/* For screens 768px and below */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 70px;
+  }
+
+  .card {
+    padding: 15px;
+    margin: 15px 0;
+  }
+
+  .card-name {
+    font-size: 18px;
+  }
+
+  .card-image {
+    max-width: 150px;
+  }
+
+  .action-btn {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .form-container {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .main-container, .news {
+    max-width: 90%;
+    padding: 20px 10px;
+  }
+
+  .home-page {
+    margin: 50px 10px;
+  }
+
+  .user-name {
+    font-size: 25px;
+  }
+}
+
+/* For screens 480px and below */
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 50px;
+  }
+
+  .card {
+    padding: 10px;
+    margin: 10px 0;
+  }
+
+  .card-name {
+    font-size: 16px;
+  }
+
+  .card-image {
+    max-width: 100px;
+  }
+
+  .action-btn {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+
+  .form-container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .main-container, .news {
+    max-width: 100%;
+    padding: 15px 5px;
+  }
+
+  .home-page {
+    margin: 30px 5px;
+  }
+
+  .user-name {
+    font-size: 20px;
+  }
+}
