@@ -1,16 +1,16 @@
 const User = require('../models/User');
 
-// Fetch all registered agencies (admin-only)
+// Fetch all registered agencies (Admin-only)
 exports.getAllAgencies = async (req, res) => {
   try {
-    const agencies = await User.find({ role: 'agency' }).select('-password');  // Fetch only users with 'agency' role
+    const agencies = await User.find({ role: 'agency' }).select('-password');
     res.json(agencies);
   } catch (error) {
     res.status(500).json({ message: 'Server error', error: error.message });
   }
 };
 
-// Edit an agency's profile (admin-only)
+// Edit an agency's profile (Admin-only)
 exports.editAgencyProfile = async (req, res) => {
   try {
     const { agencyDetails } = req.body;
@@ -20,15 +20,15 @@ exports.editAgencyProfile = async (req, res) => {
       return res.status(404).json({ message: 'Agency not found' });
     }
 
-    agency.agencyDetails = { ...agency.agencyDetails, ...agencyDetails };  // Update the agency's details
+    agency.agencyDetails = { ...agency.agencyDetails, ...agencyDetails };  // Update the agency details
     await agency.save();
-    res.json(agency);  // Return the updated agency profile
+    res.json(agency);
   } catch (error) {
     res.status(500).json({ message: 'Server error', error: error.message });
   }
 };
 
-// Delete an agency (admin-only)
+// Delete an agency (Admin-only)
 exports.deleteAgency = async (req, res) => {
   try {
     const agency = await User.findById(req.params.id);
@@ -37,14 +37,14 @@ exports.deleteAgency = async (req, res) => {
       return res.status(404).json({ message: 'Agency not found' });
     }
 
-    await agency.remove();  // Remove the agency from the database
-    res.json({ message: 'Agency removed' });
+    await agency.remove();  // Delete the agency from the database
+    res.json({ message: 'Agency removed successfully' });
   } catch (error) {
     res.status(500).json({ message: 'Server error', error: error.message });
   }
 };
 
-// Activate or deactivate an agency (admin-only)
+// Toggle agency active/inactive status (Admin-only)
 exports.toggleAgencyStatus = async (req, res) => {
   try {
     const agency = await User.findById(req.params.id);
@@ -55,7 +55,7 @@ exports.toggleAgencyStatus = async (req, res) => {
 
     agency.isActive = !agency.isActive;  // Toggle the active status
     await agency.save();
-    res.json({ message: `Agency is now ${agency.isActive ? 'active' : 'inactive'}`, agency });
+    res.json({ message: `Agency is now ${agency.isActive ? 'active' : 'inactive'}` });
   } catch (error) {
     res.status(500).json({ message: 'Server error', error: error.message });
   }
