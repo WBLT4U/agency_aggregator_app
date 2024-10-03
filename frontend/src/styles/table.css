@@ -1,0 +1,125 @@
+/* Global styling for the dashboard */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    color: white;
+  }
+  
+  header h2 {
+    font-size: 24px;
+  }
+  
+  header button {
+    background-color: #f04e23;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  header button:hover {
+    background-color: #d13b17;
+  }
+  
+  /* Center table container */
+  table {
+    width: 90%;
+    margin: 20px auto;  /* Center table */
+    border-collapse: collapse;
+    font-size: 16px;
+    max-width: 1200px;  /* Limit the width of the table */
+  }
+  
+  /* Table heading */
+  table thead {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  /* Table rows and cells */
+  table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Responsive table */
+  @media (max-width: 768px) {
+    table thead {
+      display: none;
+    }
+  
+    table, table tbody, table tr, table td {
+      display: block;
+      width: 100%;
+    }
+  
+    table tr {
+      margin-bottom: 15px;
+    }
+  
+    table td {
+      text-align: right;
+      padding-left: 50%;
+      position: relative;
+    }
+  
+    table td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 50%;
+      padding-left: 15px;
+      font-weight: bold;
+      text-align: left;
+    }
+  
+    td:last-child {
+      text-align: center;
+    }
+  }
+  
+  /* Action buttons container */
+  td button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 14px;  /* Reduce button font size */
+  }
+  
+  td button.delete {
+    background-color: #f04e23;
+  }
+  
+  td button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Flexbox for buttons to align them side by side */
+  td .action-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  td .action-buttons button {
+    flex: 1;
+    margin-right: 5px;
+  }
+  
+  td .action-buttons button:last-child {
+    margin-right: 0;
+  }
+  
+  /* Add hover effects for rows */
+  table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
