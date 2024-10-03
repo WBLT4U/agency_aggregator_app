@@ -19,6 +19,8 @@ app.use(cors());  // Enable CORS
 // API Routes
 app.use('/api/auth', require('./routes/authRoutes'));  // Authentication routes
 app.use('/api/agency', require('./routes/agencyRoutes'));  // Agency CRUD routes
+app.use('/api/admin', require('./routes/adminRoutes'));  // Admin CRUD routes
+
 
 // Start the server
 const PORT = process.env.PORT || 5000;
