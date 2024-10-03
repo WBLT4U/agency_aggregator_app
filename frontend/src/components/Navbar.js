@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './navbar.css'; // We'll create this CSS file next
-import { CodeIcon, HamburgetMenuClose, HamburgetMenuOpen } from "./Icons";
+import { HamburgetMenuClose, HamburgetMenuOpen } from "./Icons";
 
 function Navbar() {
   const [click, setClick] = useState(false);
