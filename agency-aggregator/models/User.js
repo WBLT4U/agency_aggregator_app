@@ -13,6 +13,7 @@ const UserSchema = new mongoose.Schema({
     contact: String,
     projects: { type: Number, default: 0 },
   },
+  isActive: { type: Boolean, default: true }, // New field for status
 });
 
 // Hash passwords before saving to DB
