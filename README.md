@@ -33,8 +33,8 @@ This project is a basic **Agency Aggregator Dashboard** that includes the follow
 First, clone the repository from GitHub:
 
 ```bash
-git clone https://github.com/yourusername/agency-aggregator.git
-cd agency-aggregator
+git clone https://github.com/WBLT4U/agency_aggregator_app.git
+cd agency_aggregator_app
 ```
 
 ### Step 2: Install Backend Dependencies
