@@ -53,6 +53,8 @@ Navigate to the `client` directory (where the React app is located) and install 
 cd client
 npm install
 ```
+Also run
+npm install axios
 
 ### Step 4: Setup Environment Variables
 
