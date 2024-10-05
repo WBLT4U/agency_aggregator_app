@@ -75,7 +75,7 @@ JWT_SECRET=your_jwt_secret
 In the root directory of the project, run the following command to start the Express server:
 
 ```bash
-npm run dev
+node server.js
 ```
 
 This will start the backend server at `http://localhost:5000`.
